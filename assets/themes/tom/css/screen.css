@@ -16,10 +16,10 @@ html, body {
 }
 
 body {
-  background: url('/assets/img/gray_jean.png') repeat 0 0;
+  background: url('/assets/img/grey.png') repeat 0 0;
   /*background-color: white;*/
-  font: 13.34px helvetica, arial, clean, sans-serif;
-  *font-size: small;
+  font: 14px helvetica, arial, clean, sans-serif;
+  font-size: small;
   text-align: center;
 }
 
@@ -28,6 +28,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: normal;
   margin-bottom: 1em;
 }
 
@@ -82,15 +85,18 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 40em;
+  width: 50em;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
 
 .title {
+/*  font-family: 'Inconsolata', sans-serif;*/
+  font-family: 'Marcellus', serif;
   color: #a00;
   font-weight: bold;
-  margin-bottom: 2em;
+  font-size: 24px;	
+  margin-bottom: 20px;
 }
 
   .site .title a {
@@ -129,9 +135,15 @@ ul.posts {
       margin-right: 3em;
     }
 
-      .site .footer .contact a {
-        color: #8085C1;
-      }
+    .site .footer .icons {
+      float: right;
+      font-size: 26px;
+    }
+
+    .site .footer .icons a {
+      font-weight: bold;
+        color: #888;
+    }
 
     .site .footer .rss {
       margin-top: 1.1em;
@@ -156,8 +168,9 @@ ul.posts {
   /* standard */
 
   #post pre {
+    font-size: 110%;
     border: 1px solid #ddd;
-    background-color: #ffe;
+    background-color: ghostWhite;
     padding: 0 .4em;
   }
 
@@ -168,8 +181,7 @@ ul.posts {
 
   #post code {
     border: 1px solid #ddd;
-    background-color: #ffe;
-    font-size: 85%;
+    background-color: ghostWhite;
     padding: 0 .2em;
   }
 

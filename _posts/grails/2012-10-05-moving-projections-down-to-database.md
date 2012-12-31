@@ -75,7 +75,7 @@ Proceed with these steps:
 
 And we have now access to our H2 DB schema!
   
-In our case we can define a view `v\_link\_statistics` as follows:
+In our case we can define a view `v_link_statistics` as follows:
 
 {% highlight sql %}
 SELECT l.id, l.id as link_id, sum(nvl(v.score,0)), l.date_created

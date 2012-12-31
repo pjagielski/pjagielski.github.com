@@ -6,15 +6,17 @@
    <meta name="author" content="{{ site.author.name }}" />
    <link href="http://feeds.feedburner.com/{{ site.author.feedburner }}" rel="alternate" title="your title" type="application/atom+xml" />
 
+   <link href="/assets/webfonts/ss-social.css" rel="stylesheet" />
+   <script src="/assets/webfonts/ss-social.js"></script>
+
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans|Marcellus|Inconsolata' rel='stylesheet' type='text/css'>
+
    <!-- syntax highlighting CSS -->
    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/syntax.css" type="text/css" />
 
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/screen.css" type="text/css" media="screen, projection" />
 
-   <!-- Typekit -->
-   <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
-   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 
@@ -33,21 +35,17 @@
     <div class="footer">
       <div class="contact">
         <p>
-          {{ site.author.name }}<br />
+          <h2>{{ site.author.name }}</h2>
           {{ site.tagline }}<br />
-          <a href='mailto:{{ site.author.email }}'>{{ site.author.email }}</a>
         </p>
       </div>
-      <div class="contact">
+      <div class="icons">
         <p>
-          <a href="http://github.com/{{ site.author.github }}/">github.com/{{ site.author.github }}</a><br />
-          <a href="http://twitter.com/{{ site.author.twitter }}/">twitter.com/{{ site.author.twitter }}</a><br />
+          <a class="ss-icon" href="http://github.com/{{ site.author.github }}/">octocat</a>
+          <a class="ss-icon" href="http://twitter.com/{{ site.author.twitter }}/">twitter</a>
+          <a class="ss-icon" href='mailto:{{ site.author.email }}'>mail</a>
+          <a class="ss-icon" href="http://feeds.feedburner.com/{{ site.author.feedburner }}">rss</a>
         </p>
-      </div>
-      <div class="rss">
-        <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}">
-          <img src="{{ ASSET_PATH }}/images/rss.png" alt="Subscribe to RSS Feed" />
-        </a>
       </div>
     </div>
   </div>
