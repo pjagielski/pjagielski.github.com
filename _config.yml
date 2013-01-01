@@ -9,7 +9,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : (Yet Another) Java Blog
+title : Open source, Java, Grails, ESB...
 tagline: notes from the java developer
 author :
   name : Piotr Jagielski

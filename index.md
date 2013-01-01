@@ -1,6 +1,5 @@
 ---
 layout: page
-title: (Yet Another) Java Blog
 tagline: notes from the java developer
 ---
 {% include JB/setup %}
