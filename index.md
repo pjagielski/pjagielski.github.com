@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Open source, Java, Grails, ESB...
 tagline: notes from the java developer
 ---
 {% include JB/setup %}
