@@ -242,3 +242,24 @@ ul.posts {
     margin-right: 20px;
     margin-top: 25px;
 }
+
+.post-share {
+    float: right;
+    width: 240px;
+}
+
+.post-share div {
+    float: left;
+}
+
+.tw {
+    width: 85px;
+}
+
+.gp {
+    width: 65px;
+}
+
+.fb {
+    width: 85px;
+}
