@@ -5,6 +5,9 @@ time: 2013-01-03 13:38:00 +02:00
 layout: post
 ---
 
+## TL;DR ##
+There is a example working [GitHub project](https://github.com/pjagielski/wslite-example) which covers unit testing and request/response logging when using WsLite.
+
 ## Why Groovy WsLite ? ##
 I'm a huge fan of [Groovy WsLite](https://github.com/jwagenleitner/groovy-wslite) project for calling SOAP web services. Yes, in a real world you have to deal with those - big companies have huge amount of "legacy" code and are crazy about homogeneous architecture - only SOAP, Java, Oracle, AIX... 
 
@@ -87,7 +90,7 @@ protected SOAPResponse mockResponse(String resp) {
 {% endhighlight %}
 <div>&nbsp;</div>
 ## Request and response logging #
-The WsLite itself doesn't use any logging framework. I usually handle it by adding own `sendWithLogging` method:
+The WsLite itself doesn't use any logging framework. We usually handle it by adding own `sendWithLogging` method:
 {% highlight ruby %}
 private SOAPResponse sendWithLogging(String action, Closure cl) {
     SOAPResponse response = client.send(SOAPAction: action, cl)
