@@ -9,7 +9,7 @@ While developing a Grails application you often deal with aggregations. You have
 
 Grails (and Hibernate underneath) has great projection api, but using it in a real world could lead to some messy code. Introducing database views can be much more helpful.
 
-# The problem #
+## The problem ##
 
 Let's consider some reddit-like application: you have link and votes for each link. When displaying a list of top-rated links, you have to sum up all the votes to show how many points each link received. 
 
@@ -52,7 +52,7 @@ And what if we want some more complicated features:
 It ends with writing a swiss-knife service method which receives a bunch of parameters or even a few closures on the input and produces a messy 
 and not testable criteria query with projection builder.
   
-# The solution #
+## The solution ##
 
 So there come database views. Why not move all that projections to a
 database layer? When working with Grails you often forget that RDBMS is
