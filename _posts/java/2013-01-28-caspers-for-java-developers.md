@@ -78,15 +78,10 @@ class EditDocumentPage
         casper.test.assertSelectorExists("div.customerAccountInfo", 'at EditDocumentPage')
 
     templatesTreeFirstCategory: 'ul.tree li label'
-
     templatesTreeFirstTemplate: 'ul.tree li a'
-
     closePreview: '.closePreview a'
-
     smallPreview: '.smallPreviewContent img'
-
     bigPreview: 'img.previewImage'
-
     confirmDelete: x("//div[@class='modal-footer']/a[1]")
 
 casper.editDocument = new EditDocumentPage()
