@@ -134,5 +134,7 @@ Here is a list of CasperJS features/caveats used here:
 * It's good to override standard waitUntilVisible with capting a screenshot and making a proper `log` statement. In my version I also look for a parent selector and `debugHTML` the content of it - great for debugging what is actually rendered by the browser.
 * Selenium and Geb have a nice concept of [Page Objects](http://code.google.com/p/selenium/wiki/PageObjects) - an abstract models of pages rendered by your application. Using CoffeeScript you can write your own classes, bind selectors to properties and use then in your code script. Assigning the objects to casper instance will end up with quite nice syntax like `@editDocument.assertAt()`.
 * There is some issue with CSS `:first` and `:last` selectors. I cannot get them working (but maybe I'm doing something wrong?). But in CasperJS you can also use XPath selectors which are fine for matching n-th child of some element (`x("//div[@class='modal-footer']/a[1]")`).
+<br/>
+**Update**: `:first` and `:last` are not CSS3 selectors, but JQuery ones. [Here](http://www.w3.org/TR/selectors/#selectors) is a list of CSS3 selectors, all of these are supported by CasperJS. So you can use `nth-child(1)` is this case. Thanks Andy and Nicolas for the comments!
 
 Working with CasperJS can lead you to a few hour stall, but after getting things working you have a new, cool tool in your box!
