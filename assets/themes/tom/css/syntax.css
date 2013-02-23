@@ -1,5 +1,5 @@
 .highlight  { background: #ffffff; }
-.highlight pre { word-wrap: break-word; overflow:auto; }
+.highlight pre { word-wrap: break-word; overflow:auto; font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
