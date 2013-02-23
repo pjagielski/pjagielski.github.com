@@ -82,14 +82,15 @@ The thing that really puts node.js in front is the startup time. Java is slow at
         req.response.end "User: ${req.params()['user']} ID: ${req.params()['id']}"
     } as Handler<HttpServerRequest>)
 
+    // Catch / - serve the index page
     rm.get('/', { HttpServerRequest req ->
         req.response.sendFile("web/index.html")
     } as Handler<HttpServerRequest>)
 
-    // Catch all - serve the index page
+    // Catch all - just send the file from web directory
     rm.getWithRegEx('.*', { HttpServerRequest req ->
         req.response.sendFile "web/${req.path}"
-    } as Handler<HttpServerRequest>)
+    } as Handler<HttpServerRequest>)    
 {% endhighlight %}
 
 To debug the most time consuming steps on app startup, you should configure log4j logging. Vert.x outputs some info about deploying verticles, you can also put your own logging messages. Just copy log4j.jar to vert.x lib directory and add 
