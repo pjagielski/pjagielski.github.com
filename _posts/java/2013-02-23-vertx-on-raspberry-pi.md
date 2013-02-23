@@ -101,6 +101,6 @@ To debug the most time consuming steps on app startup, you should configure log4
 ## Sample project ##
 You can check these concepts by cloning a [top monitor](https://github.com/pjagielski/vertx-top-monitor) GitHub project. It is a [Dashing](http://shopify.github.com/dashing/)-inspired web app showing results from calling a `top` command by lucid [JQuery knobs](http://anthonyterrien.com/knob/).
 
-<img src="/assets/img/vertx-top.png" style="max-width:300px;"/>
+<img src="/assets/img/vertx-top.png" style="max-width:700px;"/>
 
 The project itself it not smashing, you can just check the structure and the tests when I'm mocking ARM-specific `top` command results. Enjoy!
