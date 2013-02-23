@@ -101,6 +101,7 @@ To debug the most time consuming steps on app startup, you should configure log4
 
 ## Sample project ##
 You can check these concepts by cloning a [top monitor](https://github.com/pjagielski/vertx-top-monitor) GitHub project. It is a [Dashing](http://shopify.github.com/dashing/)-inspired web app showing results from calling a `top` command by lucid [JQuery knobs](http://anthonyterrien.com/knob/).
+Every 2 seconds stats from the `top` call are pushed through `eventBus` (and internally by SockJS) to frontend.
 
 <img src="/assets/img/vertx-top.png" style="max-width:700px;"/>
 
