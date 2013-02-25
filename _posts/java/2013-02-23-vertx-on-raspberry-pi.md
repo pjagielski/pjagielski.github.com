@@ -6,7 +6,7 @@ layout: post
 tags: java, jvm, vertx, nodejs
 ---
 ## Lightweight JVM web server ##
-Some people say that using Java on Raspberry Pi is a stupid idea. Sure, JVM uses a lot of system resources but when you can watch HD movies on RPi why don't run a tiny Java app? But I do mean **really** tiny - no Tomcat nor any other application server involved, no war and deployment stuff. That's why I came out with idea of using [vert.x](http://vertx.io) - a relatively new framework for writing modern web application. In this post what lessons I learned after developing a saimple app using vert.x and then running it on the Raspberry Pi.
+Some people say that using Java on Raspberry Pi is a stupid idea. Sure, JVM uses a lot of system resources but when you can watch HD movies on RPi why don't run a tiny Java app? But I do mean **really** tiny - no Tomcat nor any other application server involved, no war and deployment stuff. That's why I came out with idea of using [vert.x](http://vertx.io) - a relatively new framework for writing modern web application. In this post I'll try to show lessons learned after developing a sample app using vert.x and then running it on the Raspberry Pi.
 
 ## Working with vert.x on RPi ##
 Vert.x is [node.js](http://nodejs.org/) on steroids for JVM. In addition to all the libs for the JVM it offers you a lot more:
