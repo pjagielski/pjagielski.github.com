@@ -5,7 +5,7 @@ time: 2010-11-25 15:52:00 +01:00
 layout: post
 tags: java, esb, camel, spring, dao
 ---
-The 'Don't repeat the DAO!' <a href="http://www.ibm.com/developerworks/java/library/j-genericdao.html">article</a> is a fundamental one for all Spring/ORM/Java world. The generic DAO pattern works well and is widely used in both commercial projects and open-source implementations. <br /><br />But what if you only need one class for all of your DAOs? In one of my projects I just needed to put all records from a database view to a file. I decided not to use an ORM, but just Spring's JdbcTemplate, configured by view name and column to use in ORDER BY section. So I started to write Spring XML wiring and realized.... that I'm repeating the Spring beans! Every declaration looked something like:<br />
+The [Don't repeat the DAO!](href="http://www.ibm.com/developerworks/java/library/j-genericdao.html) article is a fundamental one for all Spring/ORM/Java world. The generic DAO pattern works well and is widely used in both commercial projects and open-source implementations. <br /><br />But what if you only need one class for all of your DAOs? In one of my projects I just needed to put all records from a database view to a file. I decided not to use an ORM, but just Spring's JdbcTemplate, configured by view name and column to use in ORDER BY section. So I started to write Spring XML wiring and realized.... that I'm repeating the Spring beans! Every declaration looked something like:<br />
 
 {% highlight xml %}
 <bean id="customerDAO" class="pl.touk.blog.GenericDao">
@@ -87,4 +87,4 @@ from("direct:start")
   }
 {% endhighlight %}
 
-PS. Sure, all of my classes could just subclass `GenericDaoImpl`, but I didn't want to mix database logic with the file structure logic. Using annotations feels a bit more like configuration, not implementation itself ;)<br /><br /></span>
+PS. Sure, all of my classes could just subclass `GenericDaoImpl`, but I didn't want to mix database logic with the file structure logic. Using annotations feels a bit more like configuration, not implementation itself ;)
