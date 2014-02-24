@@ -100,7 +100,7 @@ To expose basic metrics of your REST API calls just use Ring-compatible `metrics
 (def app (expose-metrics-as-json (instrument app) "/stats/"))
 {% endhighlight %}
 
-After sending some requests, you can check the collected stats by visiting `http://localhost:3000/stats/`:
+After generating some load by eg. [wrk](https://github.com/wg/wrk), you can check the collected stats by visiting `http://localhost:3000/stats/`.
 
 {% highlight javascript %}
 ring.requests.rate.GET: {
