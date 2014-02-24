@@ -88,9 +88,11 @@ protected SOAPResponse mockResponse(String resp) {
     new SOAPResponse(envelope: envelope)
 }
 {% endhighlight %}
-<div>&nbsp;</div>
-## Request and response logging #
+
+## Request and response logging ##
+
 The WsLite itself doesn't use any logging framework. We usually handle it by adding own `sendWithLogging` method:
+
 {% highlight ruby %}
 private SOAPResponse sendWithLogging(String action, Closure cl) {
     SOAPResponse response = client.send(SOAPAction: action, cl)
@@ -126,8 +128,9 @@ def send(String action, Closure cl) {
     }
 }
 {% endhighlight %}
-<div>&nbsp;</div>
+
 ## XmlSlurper gotchas ##
+
 Working with XML document with `XmlSlurper` is generally great fun, but is some cases could introduce some problems.
 A trivial example is parsing an id with a number to `Long` value:
 {% highlight ruby %}
@@ -152,6 +155,7 @@ The second example is a bit more complicated. Consider following XML fragment:
    <value>456</value>
 </edit>
 {% endhighlight %}
+
 We want to find id of `edit` whose `label` is **label1**. The simplest solution seems to be:
 
 {% highlight ruby %}
@@ -168,6 +172,7 @@ doc.edit.find { edit ->
     edit.params.param.find { it['@value'] == 'label1' }
 }
 {% endhighlight %}
-<div>&nbsp;</div>
+
 ## Example ##
-The example working project covering those hints is on [GitHub](https://github.com/pjagielski/wslite-example).
+
+The example working project covering those hints could be found on [GitHub](https://github.com/pjagielski/wslite-example).
