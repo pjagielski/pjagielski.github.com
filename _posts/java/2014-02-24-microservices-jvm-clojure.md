@@ -5,7 +5,7 @@ time: 2014-02-24 15:52:00 +01:00
 layout: post
 tags: jvm, micro-services, clojure
 ---
-Micro services could be a buzzword of 2014 for me. Few months ago I was curious to try [Dropwizard](http://www.dropwizard.io/) framework as a separate backend, but didn't get the whole idea yet. But then I watched a mind-blowing ["Micro-Services Architecture"](http://www.youtube.com/watch?v=2rKEveL55TY) talk by Fred George. Also, the 4.0 release notes of **Spring** [covers microservices](https://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release) as an important rising trend as well. For me, after 10 years of having SOA in mind, but still developing monoliths, it's a really tempting idea to try to decouple systems into a set of independently developed and deployed RESTful services.
+Micro services could be a buzzword of 2014 for me. Few months ago I was curious to try [Dropwizard](http://www.dropwizard.io/) framework as a separate backend, but didn't get the whole idea yet. But then I watched a mind-blowing ["Micro-Services Architecture"](http://www.youtube.com/watch?v=2rKEveL55TY) talk by Fred George. Also, the 4.0 release notes of **Spring** [covers microservices](https://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release) as an important rising trend as well. After 10 years of having SOA in mind, but still developing monoliths, it's a really tempting idea to try to decouple systems into a set of independently developed and deployed RESTful services.
 
 So when I decided to write a simple API for my [DevRates.com](http://devrates.com) website, instead of adding some code to existing codebase, I wanted to build a separate tiny app. But what's the best stack for micro-services? In this series of posts I'll try to compare various JVM technology stacks for this approach.
 
@@ -22,12 +22,12 @@ In this post I'll try to cover **Clojure** with [Ring](https://github.com/ring-c
 ## TL;DR ##
 You can find all the covered concepts in the following GitHub examples:
 
-* [compojure-rest](https://github.com/pjagielski/microservices-jvm/tree/master/compojure-rest) - basic **compojure** app with main class
-* [compojure-swag](https://github.com/pjagielski/microservices-jvm/tree/master/compojure-swag) - Swagger and Metrics integration
+* [compojure-rest](https://github.com/pjagielski/microservices-jvm/tree/master/compojure-rest) - basic **Compojure** app with main class
+* [compojure-swag](https://github.com/pjagielski/microservices-jvm/tree/master/compojure-swag) - **Swagger** and **Metrics** integration
 * [clorates](http://github.com/pjagielski/clorates) - complete implementation of [DevRates.com API](http://devrates.com/api/swagger/index.html)
 
 ## Basic setup ##
-There is an excellent [Zaiste's tutorial](http://zaiste.net/2014/02/web_applications_in_clojure_all_the_way_with_compojure_and_om/) showing how to kickstart REST app with **compojure**, just follow these few simple steps (the rest of the post assumes `compojure-rest` as the app name).
+There is an excellent [Zaiste's tutorial](http://zaiste.net/2014/02/web_applications_in_clojure_all_the_way_with_compojure_and_om/) showing how to kickstart REST app with **Compojure**, just follow these few simple steps (the rest of the post assumes `compojure-rest` as the app name).
 
 My sample route from `handler.clj`:
 {% highlight clojure %}
@@ -38,7 +38,7 @@ My sample route from `handler.clj`:
 {% endhighlight %}
 
 ## Fat jar ##
-In a simple setup, **compojure** app is being run through ring lein plugin. To enable running it as a standalone command-line app, you have to write a main method which starts **Jetty** server.
+In a simple setup, **Compojure** app is being run through lein ring plugin. To enable running it as a standalone command-line app, you have to write a main method which starts **Jetty** server.
 
 `project.clj`
 {% highlight clojure %}
@@ -63,7 +63,7 @@ In a simple setup, **compojure** app is being run through ring lein plugin. To e
 To build a single "fat" jar just run `lein uberjar`, and then `java -jar target/compojure-rest-0.1.0-SNAPSHOT-standalone.jar` runs the app.
 
 ## Swagger ##
-The nice thing about **compojure** is that you can easy expose Swagger documentation by using [swag](https://github.com/narkisr/swag) library. There are some conflicts between swag and ring lein plugin, so just look at the [compojure-swag]() repo for a working example. 
+The nice thing about **Compojure** is that you can easy expose Swagger documentation by using [swag](https://github.com/narkisr/swag) library. There are some conflicts between swag and ring lein plugin, so just look at the [compojure-swag](https://github.com/pjagielski/microservices-jvm/tree/master/compojure-swag) for a working example. 
 
 Here is a typical snippet from `handler.clj`:
 {% highlight clojure %}
@@ -80,7 +80,7 @@ So, `swag` introduces `defroutes-`, `GET-`, `POST-` which take additional metada
 
 ## Metrics ##
 
-To expose basic metrics of your REST API calls just use ring-compatible `metrics-clojure-ring` library.
+To expose basic metrics of your REST API calls just use Ring-compatible `metrics-clojure-ring` library.
 
 `project.clj`
 {% highlight clojure %}
