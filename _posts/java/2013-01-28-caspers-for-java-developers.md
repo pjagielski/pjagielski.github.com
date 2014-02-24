@@ -127,6 +127,7 @@ casper.run ->
 {% endhighlight %}
 
 Here is a list of CasperJS features/caveats used here:
+
 * Using [CoffeeScript](http://coffeescript.org/) is a huge win for your test code to look neat
 * When using [casper test](http://casperjs.org/testing.html#casper-test-command) command, beware of different (than above articles) logging setup. You can pass `--direct --log-level=debug` from commandline for best results. Logging is essential here since Phantom often exists without any error and you do want to know what just happened.
 * Extract your helper code into separate files and include them by using `--includes` switch.
