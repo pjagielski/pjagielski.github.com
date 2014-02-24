@@ -91,7 +91,7 @@ There are in general two approaches to integration testing:
 * test is being run on separate JVM than the app, which is deployed on some other integration environment
 * test deploys the application programmatically in the setup block.
 
-Both of these have their pros and cons, but for small enough servoces, I personally prefer the second approach. It's much easier to setup and you have only one JVM started, which makes debugging really easy. You can use a generic framework like [Arquillian](http://arquillian.org/) for starting your application in a container environment, but I prefer simple solutions and just use emdedded Jetty. To make test setup 100% production equivalent, I'm creating full Jetty's `WebAppContext` and have to resolve all runtime dependencies for Jersey auto-discovery to work. This can be simply achieved with Maven resolved from [Shrinkwrap](http://www.jboss.org/shrinkwrap) - an Arquillian subproject: 
+Both of these have their pros and cons, but for small enough services, I personally prefer the second approach. It's much easier to setup and you have only one JVM started, which makes debugging really easy. You can use a generic framework like [Arquillian](http://arquillian.org/) for starting your application in a container environment, but I prefer simple solutions and just use emdedded Jetty. To make test setup 100% production equivalent, I'm creating full Jetty's `WebAppContext` and have to resolve all runtime dependencies for Jersey auto-discovery to work. This can be simply achieved with Maven resolved from [Shrinkwrap](http://www.jboss.org/shrinkwrap) - an Arquillian subproject: 
 
 {% highlight java %}
     WebAppContext webAppContext = new WebAppContext();
