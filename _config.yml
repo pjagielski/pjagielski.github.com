@@ -10,8 +10,8 @@ markdown: kramdown
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Open source, Java, Grails, ESB...
-tagline: notes from the java developer
+title : Full stack JVM development...
+tagline: notes from the jvm developer
 author :
   name : Piotr Jagielski
   email : pj@devrates.com
