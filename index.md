@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Open source, Java, Grails, ESB...
+title: Full stack JVM development...
 tagline: notes from the java developer
 ---
 {% include JB/setup %}
