@@ -120,7 +120,7 @@ ring.requests.rate.GET: {
 * Lighttable is great! I'm really impressed with the fast feedback loop by just ctrl+entering the expressions. 
 * Also, live reloading with `ring server` works fine. Just change the change code and see the changes immediately. Rapid!
 * Unlike other recently popular languages, Clojure has no killer-framework. Rails, Play/Akka, Grails/Gradle - all of these are key parts of Ruby, Scala and Groovy ecosystems. What about Clojure? A collection of small (micro?) libraries doing one thing well and working great together - just like Unix commands.
-* It may be true that Clojure is not good for large projects. With all the complex contructs (meta or ) and no control of the visibility, it could be hard to maintain large codebase. But it's not a first-class problem in a micro-services world..
+* It may be true that Clojure is not good for large projects. With all the parenthesis and complex contructs (meta, cloruje.async) it could be hard to maintain large codebase. But it's not a first-class problem in a micro-services world..
 
 ## Resources ##
 * [Talk by Fred George](https://www.youtube.com/watch?v=2rKEveL55TY)
