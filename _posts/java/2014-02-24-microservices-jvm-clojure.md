@@ -1,11 +1,11 @@
 --- 
 name: microservices-jvm-clojure
-title: Micro services on the JVM part 1 - Clojure
+title: Microservices with Clojure
 time: 2014-02-24 15:52:00 +01:00
 layout: post
 tags: jvm, micro-services, clojure
 ---
-Micro services may be a buzzword of 2014 for me. Few months ago I was curious to try [Dropwizard](http://www.dropwizard.io/) framework as a separate backend, but didn't get the whole idea yet. But then I watched a mind-blowing ["Micro-Services Architecture"](http://www.youtube.com/watch?v=2rKEveL55TY) talk by Fred George. Also, the 4.0 release notes of **Spring** [covers microservices](https://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release) as an important rising trend as well. After 10 years of having SOA in mind, but still developing monoliths, it's a really tempting idea to try to decouple systems into a set of independently developed and deployed RESTful services.
+Microservices may be a buzzword of 2014 for me. Few months ago I was curious to try [Dropwizard](http://www.dropwizard.io/) framework as a separate backend, but didn't get the whole idea yet. But then I watched a mind-blowing ["Micro-Services Architecture"](http://www.youtube.com/watch?v=2rKEveL55TY) talk by Fred George. Also, the 4.0 release notes of **Spring** [covers microservices](https://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release) as an important rising trend as well. After 10 years of having SOA in mind, but still developing monoliths, it's a really tempting idea to try to decouple systems into a set of independently developed and deployed RESTful services.
 
 So when I decided to write a simple API for my [DevRates.com](http://devrates.com) website, instead of adding some code to existing codebase, I wanted to build a separate tiny app. But what's the best stack for micro-services? In this series of posts I'll try to compare various JVM technology stacks for this approach.
 
