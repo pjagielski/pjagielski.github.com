@@ -114,7 +114,7 @@ It works! In case of any problems you can find working version in [this commit](
 
 Adding frontend with figwheel
 -----------------------------
-Coding backend in Clojure is great, but what about the frontend? As you may already know, Clojure could be compiled not only to JVM bytecode, but also to Javascript. This may sound familiar if you used e.g. Coffescript. But ClojureScript philosophy is not only to provide some syntax sugar, but improve your development cycle with great tooling and fully interactive development. Let's see how to achieve it.
+Coding backend in Clojure is great, but what about the frontend? As you may already know, Clojure could be compiled not only to JVM bytecode, but also to Javascript. This may sound familiar if you used e.g. Coffeescript. However, ClojureScript's philosophy is not only to provide some syntax sugar, but improve your development cycle with great tooling and fully interactive development. Let's see how to achieve it.
 
 The best way to introduce ClojureScript to a project is [figweel](https://github.com/bhauman/lein-figwheel). First let's add fighweel plugin and configuration to `project.clj`:
 
@@ -137,7 +137,7 @@ And cljsbuild configuration:
                           :output-dir "resources/public/js/out"}}]}
 {% endhighlight %}
 
-In short this tells ClojureScript compiler to take sources from `src-cljs` with `figweel` support and but resulting JavaScript into `resources/public/js/clojure-web-app.js` file. So we need to include this file in a simple HTML page:
+In short this tells ClojureScript compiler to take sources from `src-cljs` with `figweel` support and put resulting JavaScript into `resources/public/js/clojure-web-app.js` file. So we need to include this file in a simple HTML page:
 
 {% highlight html %}
 <!DOCTYPE html>
