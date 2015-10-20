@@ -226,4 +226,4 @@ So the `contact-comp` is just rendering a single contact. We use `om/build-all` 
 
 Again, in [this commit](https://github.com/pjagielski/modern-clj-web/commit/321890e677fdcd71ee85d1391aa8dda990deaf41) should be a working version in case of any problems.
 
-And it you liked Om, I highly recommend [official tutorials](https://github.com/omcljs/om/wiki/Basic-Tutorial) and [Zero to Om](https://blog.stephanbehnke.com/zero-to-om/) series.
+And if you liked Om, I highly recommend [official tutorials](https://github.com/omcljs/om/wiki/Basic-Tutorial) and [Zero to Om](https://blog.stephanbehnke.com/zero-to-om/) series.
