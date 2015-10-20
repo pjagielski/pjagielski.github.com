@@ -99,6 +99,14 @@ The `{repo :contact-repo}` notation (destructuring) automatically binds `:contac
 
 In short - we use system’s `new-mongo-db` to create Mongo component, make it a dependency to repository which itself is a dependency of example endpoint.
 
+And finally we need to configure `:mongo-uri` config property in `config.clj`:
+
+{% highlight clojure %}
+ (def environ
+  {:http {:port (some-> env :port Integer.)}}
+   :mongo-uri "mongodb://localhost:27017/contacts"})
+{% endhighlight %}
+
 To check if it works fine, restart repl, type `(go)` again and make a GET to [http://localhost:3000/contacts](http://localhost:3000/contacts).
 
 {% highlight bash %}
