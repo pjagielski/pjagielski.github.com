@@ -195,7 +195,7 @@ To render a "hello world" component we need to add some code in `core.cljs`:
          {:target (.getElementById js/document "main")})
 {% endhighlight %}
 
-What's going on here? The main concept of Om is keeping whole application state in one *global atom*, which in Clojure way of managing state. So we pass this `app-state` map (wrapped in `atom`) as a parameter to `om/root` which mounts components into real DOM (`<div id="main"/>` from `index.html`). The `app` component just displays the `:message` value, so you should see "hello from om" rendered. If you have `fighweel` running, you can change the message value, and it should be updated instantly.
+What's going on here? The main concept of Om is keeping whole application state in one *global atom*, which is Clojure way of managing state. So we pass this `app-state` map (wrapped in `atom`) as a parameter to `om/root` which mounts components into real DOM (`<div id="main"/>` from `index.html`). The `app` component just displays the `:message` value, so you should see "hello from om" rendered. If you have `fighweel` running, you can change the message value, and it should be updated instantly.
 
 And finally let's render our contacts with Om:
 
