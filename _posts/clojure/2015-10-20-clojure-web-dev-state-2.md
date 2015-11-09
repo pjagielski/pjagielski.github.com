@@ -102,8 +102,8 @@ In short - we use system’s `new-mongo-db` to create Mongo component, make it a
 And finally we need to configure `:mongo-uri` config property in `config.clj`:
 
 {% highlight clojure %}
- (def environ
-  {:http {:port (some-> env :port Integer.)}}
+ (def defaults
+  {:http {:port 3000}
    :mongo-uri "mongodb://localhost:27017/contacts"})
 {% endhighlight %}
 
